@@ -1,0 +1,19 @@
+{
+  "name": "server1",
+  "version": "1.0.0",
+  "description": "api for ave-rizki wedding-app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/RizkiDPrast/aveRizkiWeddingApi.git"
+  },
+  "author": "rizkidwip@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RizkiDPrast/aveRizkiWeddingApi/issues"
+  },
+  "homepage": "https://github.com/RizkiDPrast/aveRizkiWeddingApi#readme"
+}
