@@ -17,18 +17,18 @@ var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080,
     ip   = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || 'localhost',
     mongoURL = process.env.OPENSHIFT_MONGODB_DB_URL || process.env.MONGO_URL,
     mongoURLLabel = "";
-// if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
-  if (mongoURL == null) {
-  // var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
-  //     mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'] || localhost,
-  //     mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'] || 27017,
-  //     mongoDatabase = process.env[mongoServiceName + '_DATABASE'] || 'guessapi',
-  //     mongoPassword = process.env[mongoServiceName + '_PASSWORD']
-  //     mongoUser = process.env[mongoServiceName + '_USER'];
-      var mongoHost =  '127.0.0.1',
-          mongoPort =  27017,
-          mongoDatabase = 'user',
-          mongoUser, mongoPassword;
+if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
+  // if (mongoURL == null) {
+  var mongoServiceName = process.env.DATABASE_SERVICE_NAME.toUpperCase(),
+      mongoHost = process.env[mongoServiceName + '_SERVICE_HOST'],
+      mongoPort = process.env[mongoServiceName + '_SERVICE_PORT'],
+      mongoDatabase = process.env[mongoServiceName + '_DATABASE'],
+      mongoPassword = process.env[mongoServiceName + '_PASSWORD']
+      mongoUser = process.env[mongoServiceName + '_USER'];
+      // var mongoHost =  '127.0.0.1',
+      //     mongoPort =  27017,
+      //     mongoDatabase = 'user',
+      //     mongoUser, mongoPassword;
 
 
   if (mongoHost && mongoPort && mongoDatabase) {
